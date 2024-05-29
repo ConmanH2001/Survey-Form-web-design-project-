@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title" >Video Game Survey</h1>
+      <p id="description">Please answer this survey to give us information about some of your favorite games!</p>
+    </header>
+    <form id="survey-form">
+      <fieldset><legend>Important Info</legend>
+        <label for="name" id="name-label">Name: <input placeholder="John Smith" name="name" id="name" type="text" required/></label>
+        <label for="email" id="email-label">Email: <input name="email" id="email" type="email" placeholder="example@email.com" required/></label>
+        <label for="number" id="number-label">Age: <input name="number" id="number" type="number" min=1 max=120 placeholder="69" required/></label>
+      </fieldset>
+      <fieldset><legend>Game Info</legend>
+        <label for="game" id="game-label">Game Name: <input name="game" id="game" type="text" required />
+        </label>
+        <div>
+          <h4>Favorite Game Genre:</h4>
+          <label id="rpg-label" for="rpg"><input id="rpg" class="inline" name="game-genre" type="radio" checked value="rpg"/> RPG</label>
+          <label id="action-label" for="action"><input id="action" class="inline" name="game-genre" type="radio" value="action"/> Action</label>
+          <label id="adventure-label" for="adventure"><input id="adventure" class="inline" name="game-genre" type="radio" value="adventure"/> Adventure</label>
+          <label id="fps-label" for="fps"><input id="fps" class="inline" name="game-genre" type="radio" value="fps"/> First-Person Shooter</label>
+          <label id="rts-label" for="rts"><input id="rts" class="inline" name="game-genre" type="radio" value="rts"/> Real-Time Strategy</label>
+          <label id="other-label" for="other"><input id="other" class="inline" name="game-genre" type="radio" value="other"/> Other</label>
+          <label id="other-text-label" for="other-text">(If other, please specify: )<input id="other-text" type="text"/></label>
+        </div>
+        <div>
+          <h4>When do you game?</h4>
+          <label id="day-label" for="day"><input type="checkbox" id="day" value="day"> Day</label>
+          <label id="night-label" for="night"><input type="checkbox" id="night" value="night"> Night</label>
+        </div>
+      </fieldset>
+      <fieldset><legend>Extra Info (not required)</legend>
+        <label for="dropdown" id="dropdown-label"> How did you find this survey?
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">I searched tirelessly for it</option>
+            <option value="2">I was sent it</option>
+            <option value="3">I don't relly know...</option>
+          </select>
+        </label>
+        <label id="idea-label" for="idea">Your idea for a game:<textarea id="idea" placeholder="Input your idea here!" row="3" col="30"></textarea></label>
+      </fieldset>
+      <input id="submit" value="Submit" type="submit">
+    </form>
+  </body>
+</html>
